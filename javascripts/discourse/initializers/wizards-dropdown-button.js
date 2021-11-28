@@ -19,9 +19,18 @@ export default {
           if (menu_links.length > 0) {
             menu_links.forEach((link) => {
               const attributes = link.split(",");
+
+              // add an additional class if it is given in settings
+              let targetClass;
+              if (typeof attributes[3] === "undefined") {
+                targetClass = "";
+              } else {
+                targetClass = `${attributes[3]}`.trim();
+              }
+
               menu_links_buffer.push(
                 h(
-                  "a.btn.btn-default.btn-icon-text",
+                  `a.btn.btn-default.btn-icon-text.${targetClass}`,
                   {
                     href: attributes[2],
                     title: attributes[1],

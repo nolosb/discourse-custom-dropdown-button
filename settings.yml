@@ -15,10 +15,11 @@ dropdown_items:
   default: "hat-wizard, Wizard 1, /|frog, Wizard 2, /"
   description:
     en: "Comma delimited in this order:</br>
-    <b>Icon, Text, URL</b><br>
+    <b>Icon, Text, URL, (optional CSS class-name)</b><br>
     <b>Icon:</b> the name of the Fontawesome icon to be used<br>
     <b>Text:</b> the visible text of the menu item<br>
-    <b>URL:</b> the URL you want the item to point to"
+    <b>URL:</b> the URL you want the item to point to<br>
+    <b>CSS class-name:</b> an optional class-name to target the entry"
 new_topic_as_dropdown:
   type: bool
   default: true
